@@ -1,0 +1,67 @@
+html {
+  
+   background: url("sounds/drums.jpg");
+   background-size: 600px 400px;
+   background-repeat: no-repeat;
+   background-position: center top; 
+}
+
+.border {
+    border: 5px solid grey;
+    transition: all 0.09s;
+}
+
+table {
+  align-items: bottom;
+  width: 50%;
+  
+  position: absolute;
+  top: 500px;
+  left: 200px;
+}
+
+td {
+  min-width: 80px;
+  align-items: bottom;
+  justify-content: center; 
+  text-align: center;
+
+}
+
+.font	{
+	
+	font: 56px Courier;
+	color: grey;
+	cursor: pointer;
+  align-items: center;
+  justify-content: center; 
+
+}
+
+kbd {
+  display: block;
+  font-size: 4rem;
+}
+
+.playing {
+  transform: scale(1.1);
+  border: 5px solid black;
+  font-weight: bold;
+  background-color: grey;
+
+}
+
+.keys {
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;  
+}
+
+small {
+	display: block;
+	text-align: center;
+  text-orientation: vertical;
+  text-transform: capitalize;
+}
