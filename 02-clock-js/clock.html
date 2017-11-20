@@ -3,35 +3,25 @@
 <title>W3.CSS</title>
 <link rel="stylesheet" href="clock.css">
 <body>
+		<div class="clock">
+			
+				<div id="clockFace" >		
 
-
-
-<div class="clock">
-
-	
-	
-		<div id="clockFace" >		
-
-			<div class="hand hourHand" >H</div>
-			<div class="hand minuteHand">M</div>
-			<div class="hand secondHand">S</div>		
-<canvas id="canvas" id="canvas" width="400" height="400" z-index: -950;>	
-
-			</canvas>
+					<div class="hand hourHand">
+						<small class="dot">H</small>
+					</div>
+					<div class="hand minutesHand">
+						<small class="dot">M</small>
+					</div>
+					<div class="hand secondsHand">
+						<small class="dot">S</small>
+					</div>		
+					
+					<canvas id="canvas" id="canvas" width="400" height="400" z-index: -950;></canvas>
+				</div>		
 		</div>
 
-		
-
-
-		
-</div>
-
- 
-
-
-<p id="time"></p>
-
+		<p id="time"></p>
 </body>
-
-<script type="text/javascript" src="clock.js"></script>
+	<script type="text/javascript" src="clock.js"></script>
 </html> 

@@ -1,48 +1,11 @@
-
-.circleInner { 
-   width: 500px;
-   height: 500px;
-   background: skyblue; 
-   border-radius: 250px;
-}  
-
-.absoluteInner {
-  position: absolute;
-  top: 48px;
-  left: 53px;
-  
-}
-
-.circleOuter { 
-   width: 600px;
-   height: 600px;
-   background: blue; 
-   border-radius: 300px;
-}  
-
-.absoluteOuter {
-  position: absolute;
-  top: 50px;
-  left: 350px;
-  width: 600px;
-  height: 600px;
-}
-
-#time{
-  position: absolute;
-  top: 450px;
-  left: 465px;
-  font-size: 100px;
-}
-
-
-  html {
+    html {
       background: skyblue;
       background-size:cover;
       font-family:'helvetica neue';
       text-align: center;
       font-size: 10px;
     }
+
     body {
       margin: 0;
       font-size: 2rem;
@@ -51,6 +14,7 @@
       min-height: 100vh;
       align-items: center;
     }
+
     .clock {
       width: 30rem;
       height: 30rem;
@@ -58,9 +22,15 @@
       border-radius:50%;
       margin:50px auto;
       position: relative;
-      padding:2rem;
-      
+      padding:2rem;      
     }
+
+    #clockFace {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform: translateY(-3px); 
+    } 
 
     #canvas{
     	width=100%; 
@@ -69,28 +39,45 @@
     	position: absolute;
     	top: -45px;
     	left: -50px;
-
-    }
-
-    #clockFace {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      transform: translateY(-3px); /* account for the height of the clock hands */
-    }  
+    }     
     
-    .hand {width:50%;
-      height:6px;      
-      background:black;
+    .hand {
       position: absolute;
       border-bottom-left-radius: 50%;
       border-top-left-radius: 50%;
       border-bottom-right-radius: 20%;
       border-top-right-radius: 20%;
       top:50%;
+      height:6px;
       transform-origin: 100%;
       transform: rotate(90deg);
-      transition: all 0.005s;      
+      transition: all 0.005s;            
     } 
 
+    .hourHand {
+      width:35%;      
+      left: 15%;          
+    } 
+
+    .minutesHand {
+      width:45%;      
+      left: 5%; 
+      z-index: 150;    
+    } 
+
+    .secondsHand {
+      width:50%; 
+      z-index: 250;          
+    } 
+
+    #time{
+      position: absolute;
+      top: 450px;
+      left: 445px;
+      font-size: 100px;
+    } 
+
+    .dot {
+                           
+    }     
 

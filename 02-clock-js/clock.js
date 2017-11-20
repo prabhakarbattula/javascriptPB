@@ -1,20 +1,19 @@
-  function pad2(number) {
-   
+  function pad2(number) {   
      return (number < 10 ? '0' : '') + number;
     }
 
 
-  const secondHand = document.querySelector('.secondHand');
-  const minuteHand = document.querySelector('.minuteHand');
+  const secondHand = document.querySelector('.secondsHand');
+  const minuteHand = document.querySelector('.minutesHand');
   const hourHand = document.querySelector('.hourHand');
+  
+
   function setDate() {
     const now = new Date();
     const seconds = now.getSeconds();
     const secondsDegrees = ((seconds / 60) * 360) + 90;
-    secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
-    secondHand.style.text = `rotate(${secondsDegrees}deg)`;    
-    secondHand.style.background = "grey";
-
+    secondHand.style.transform = `rotate(${secondsDegrees}deg)`;     
+    secondHand.style.background = "grey";     
     
     const mins = now.getMinutes();
     const minsDegrees = ((mins / 60) * 360) + ((seconds/60)*6) + 90;
@@ -31,8 +30,7 @@
     const s = pad2(seconds);
 
     const currentTime = h+":"+m+":"+s;
-    //const currentTime = hour+":"+mins+":"+seconds;
-    
+        
     document.getElementById("time").innerHTML = currentTime;  
 
   }
