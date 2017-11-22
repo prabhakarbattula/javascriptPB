@@ -6,14 +6,16 @@
   const secondHand = document.querySelector('.secondsHand');
   const minuteHand = document.querySelector('.minutesHand');
   const hourHand = document.querySelector('.hourHand');
+  const audioElement = document.getElementById('sound');
   
 
   function setDate() {
     const now = new Date();
     const seconds = now.getSeconds();
-    const secondsDegrees = ((seconds / 60) * 360) + 90;
+    const secondsDegrees = ((seconds / 60) * 360) + 90;    
     secondHand.style.transform = `rotate(${secondsDegrees}deg)`;     
-    secondHand.style.background = "grey";     
+    secondHand.style.background = "grey";
+
     
     const mins = now.getMinutes();
     const minsDegrees = ((mins / 60) * 360) + ((seconds/60)*6) + 90;
@@ -29,14 +31,13 @@
     const m = pad2(mins);
     const s = pad2(seconds);
 
-    const currentTime = h+":"+m+":"+s;
+    const currentTime = h+":"+m+":"+s;    
         
-    document.getElementById("time").innerHTML = currentTime;  
+    document.getElementById("time").innerHTML = currentTime;      
 
   }
   setInterval(setDate, 1000);
   setDate();
-
 
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
@@ -86,3 +87,7 @@ function drawNumbers(ctx, radius) {
     ctx.rotate(-ang);
   }
 }
+
+
+
+
