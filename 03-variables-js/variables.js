@@ -1,24 +1,20 @@
-const inputs = document.querySelectorAll('.controls input');
-    function handleUpdate() {
-      const suffix = this.dataset.sizing || '';
+//const inputs = document.querySelectorAll('.controls input');
+
+  const spacing = document.querySelector('input#spacing');
+  const blur = document.querySelector('input#blur');
+
+    function handleUpdateSpacing() { 
+      const suffix = this.dataset.sizing || '';  
       document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+      document.getElementById('spacingOutput').innerHTML = this.value; 
     }
-    inputs.forEach(input => input.addEventListener('change', handleUpdate));
-    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
 
-//code for displaying values based on slider drag
-
-    div.myTemplate.rendered = function(){
-		document.getElementById("spacing").oninput = function() {
-    		myFunction()
-		};
-	}
-
-function myFunction() {
-   var val = document.getElementById("spacing").value //gets the oninput value
-   document.getElementById('output').innerHTML = val //displays this value to the html page
-   console.log(val)
-}
-
-
-//intercom code added
+    function handleUpdateBlur() { 
+      const suffix = this.dataset.sizing || '';  
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+      document.getElementById('blurOutput').innerHTML = this.value; 
+    }
+    
+    //inputs.forEach(input => input.addEventListener('change' || 'mousemove', handleUpdate));
+    spacing.addEventListener('change' || 'mousemove', handleUpdateSpacing);
+       blur.addEventListener('change' || 'mousemove', handleUpdateBlur);

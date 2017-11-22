@@ -1,6 +1,6 @@
 :root {
-      --base: #ffc600;
-      --spacing: 10px;
+      --base: #2D32DA;
+      --spacing: 9px;
       --blur: 5px;
     }
     img {
@@ -16,7 +16,7 @@
     */
     body {
       text-align: center;
-      background: #193549;
+      background: skyblue;
       color: white;
       font-family: 'helvetica neue', sans-serif;
       font-weight: 100;
@@ -28,6 +28,32 @@
     input {
       width:100px;
     }
+
+    #spacingOutput {
+      position: absolute;
+      left: 419px;
+    }
+
+    #blurOutput {
+      position: absolute;
+      left: 650px;   
+    }
+
+    output {
+      align-self: center; 
+      font-weight: bold;
+      background-color: grey;
+      color: black;
+      border-radius: 20px;
+    }
+
+    hr {
+      display: block;
+      margin-top: 1.5em;
+      margin-bottom: 1em;
+    }
+    
+   
 
     
 
