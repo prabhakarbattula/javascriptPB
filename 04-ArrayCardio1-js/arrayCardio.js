@@ -58,7 +58,47 @@ const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick
       console.table(inventorLived);
     }
 
-      
+    /* 06. create a list of Boulevards in Paris that contain 'de' anywhere in the name
+     
+     This exercise can only be verified on browser console.
+     https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+
+    const links = Array.from(document.querySelectorAll('#mw-pages  a'));
+    const texts = links.map(link => link.textContent);
+    console.table(texts);
+    const de = texts.filter(index => index.includes('de'));
+    console.table(de);
+    */
+
+
+    // 07. Sorting people using last name
+
+    function sortLastName(){
+      const sortLast =  people.sort((a,b) => {
+        
+        const[aLast, aFirst] = a.split(', ');
+        const[bLast, bFirst] = b.split(', ');
+
+        return aLast > bLast? 1 : -1;
+
+        })
+      console.table(sortLast);
+    }
+
+    // 08. Reduce Excersie
+    // Sum up the instances of each of these
+    const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'walk','car', 'walk','truck', 'pogostick'];
+
+      function reduceData(){
+        const transport = data.reduce(function(a,b){
+          if (!a[b]) {
+            a[b] = 0;
+          }
+          a[b]++;
+          return a;
+        }, {});
+        console.table(transport);
+      }
       
 
     // Adding all functions in this function to run on page load.
@@ -68,7 +108,11 @@ const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick
       inventorOldToNew();
       inventorsAllLived();
       sortInventorsYearsLived();
+      sortLastName();
+      reduceData();
     }
+
+
 
 
 
