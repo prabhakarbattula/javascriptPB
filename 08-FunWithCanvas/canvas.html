@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FunWithCanvas</title>
+</head>
+<body>
+	<label for="base">Pick Color</label>
+    <input id="base" type="color" name="base" value="#ff0000">
+
+    <label for="lineWidth" id="spacingLabel">Line Width :</label>   
+    <input id="lineWidth" type="range" name="spacing" min="1" max="20" value="1" data-sizing="px"> 
+
+	<canvas id=canvas></canvas>
+
+
+
+</body>
+	<style type="text/css">
+		canvas {
+			background-color: skyblue;
+			height: 650px;
+			width: 1250px;
+			border: 2px solid blue;
+			background: url("White-Canvas-Texture-Backgrounds.jpg");
+		}
+
+		:root {
+      		--hue: #ff0000; 
+      		--line: 5;     
+    	}
+	</style>
+	<script type="text/javascript" src="canvas.js"></script>
+</html>
